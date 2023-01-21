@@ -1,8 +1,15 @@
 *{
   box-sizing: border-box;
 }
+::selection{
+  background: #1b1b1b;
+  color:#fff;
+}
 a{
   cursor: pointer;
+}
+a:hover{
+  color: cornflowerblue;
 }
 body{
   color: #222;
@@ -10,10 +17,38 @@ body{
 img{
   max-width: 100%;
 }
+input{
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+button{
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border:0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+}
+form h1{
+  text-align: center;
+}
 .posts{
   flex: 9;
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
 }
-
+div.content p{
+  line-height: 1.7rem;
+  margin: 30px 0;
+}
+div.content li{
+  margin-bottom: 10px;
+}

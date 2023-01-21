@@ -1,4 +1,4 @@
-import {Navigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default function Register() {
     return (
@@ -21,7 +21,7 @@ export default function Register() {
             />
             <button>Register</button>
             <div className="error"></div>
-            <div>Already registered? </div>
+            <Link to="/login">Already registered? </Link>
         </form>
     );
 }

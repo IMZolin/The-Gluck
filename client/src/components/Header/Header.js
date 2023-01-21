@@ -5,6 +5,7 @@ export default function Header() {
         <header>
             <Link to="/" className="logo">The Gluck</Link>
             <nav>
+                <a>Categories</a>
                 <Link to="/login">Login</Link>
                 <Link to="/register">Register</Link>
             </nav>

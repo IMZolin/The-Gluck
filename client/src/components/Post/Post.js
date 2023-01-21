@@ -4,11 +4,13 @@ import "./post.css";
 export default function Post({img}) {
     return (
         <div className="post">
+            <Link to="/post/abc" className="link">
             <img
                 className="postImg"
                 src={img}
                 alt=""
             />
+            </Link>
             <div className="postInfo">
                 <div className="postCats">
           <span className="postCat">

@@ -1,5 +1,5 @@
 import "./login.css";
-import {Navigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 export default function Login() {
     return (
         <form className="login" >
@@ -18,8 +18,8 @@ export default function Login() {
             />
             <button>Login</button>
             <div className="error"></div>
-            <a className="navigateLinks" to="/register">New user</a>
-            <a id="f-pass" className="navigateLinks">Forgot password</a>
+            <Link to="/register">New user</Link>
+            {/*<a id="f-pass" className="navigateLinks">Forgot password</a>*/}
 
         </form>
 
