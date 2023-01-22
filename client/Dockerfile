@@ -1,20 +1,19 @@
-# Dockerfile for React client
+# Fetching the latest node image on alpine linux
+FROM node:alpine AS development
 
-# Build react client
-FROM node:10.16-alpine
+# Declaring env
+ENV NODE_ENV development
 
-# Working directory be app
-WORKDIR /usr/src/app
+# Setting up the work directory
+WORKDIR /react-app
 
-COPY package*.json ./
+# Installing dependencies
+COPY ./package.json /react-app
+RUN npm install
 
-###  Installing dependencies
-
-#RUN npm install --silent
-
-# copy local files to app folder
+# Copying all the files in our project
 COPY . .
 
 EXPOSE 3000
-
-CMD ["npm","start"]
+# Starting our application
+CMD npm start
