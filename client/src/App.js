@@ -9,6 +9,7 @@ import CreatePost from "./pages/Post/CreatePost";
 import EditPost from "./pages/Post/EditPost";
 import Homepage from "./pages/Homepage/Homepage";
 import PostPage from "./pages/Post/PostPage";
+import Settings from "./pages/Profile/Settings";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/create" element={<CreatePost />} />
           <Route path="/edit" element={<EditPost />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
   );
