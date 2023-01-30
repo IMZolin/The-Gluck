@@ -43,7 +43,8 @@ form h1{
   flex: 9;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin-left: auto;
+  /*margin: 20px;*/
 }
 div.content p{
   line-height: 1.7rem;

@@ -1,0 +1,19 @@
+form.contact-us{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+textarea{
+    resize: none;
+    overflow: auto;
+    margin: auto;
+    width: 100%;
+}
+.navigateLinks{
+    display: inline-block;
+    text-align: justify;
+}
+a{
+    text-decoration: underline;
+    color: inherit;
+}

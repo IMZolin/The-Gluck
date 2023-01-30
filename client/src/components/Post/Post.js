@@ -1,17 +1,27 @@
 import { Link } from "react-router-dom";
+import {formatISO9075} from "date-fns";
 import "./post.css";
 
 export default function Post({img}) {
     return (
         <div className="post">
-            <Link to="/post/abc" className="link">
-            <img
-                className="postImg"
-                src={img}
-                alt=""
-            />
-            </Link>
-            <div className="postInfo">
+            <div className="image">
+                <Link to="/post/abc" className="link">
+                    <img
+                        className="postImg"
+                        src={img}
+                        alt=""
+                    />
+                </Link>
+            </div>
+            <div className="texts">
+                <Link to={`/post/abc`}>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                </Link>
+                <p className="info">
+                    <a className="author">@author123</a>
+                    <time>{formatISO9075(new Date(2022-12-12))}</time>
+                </p>
                 <div className="postCats">
           <span className="postCat">
             <Link className="link" to="/posts?cat=Music">
@@ -25,19 +35,10 @@ export default function Post({img}) {
           </span>
                 </div>
                 <span className="postTitle">
-          <Link to="/post/abc" className="link">
-            Lorem ipsum dolor sit amet
-          </Link>
         </span>
-                <hr />
-                <span className="postDate">1 hour ago</span>
+                <p className="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                    officia architecto deserunt deleniti? </p>
             </div>
-            <p className="postDesc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-                officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-                fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-                atque, exercitationem quibusdam, reiciendis odio laboriosam?
-            </p>
         </div>
     );
 }

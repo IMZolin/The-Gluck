@@ -9,7 +9,7 @@ header a{
     text-decoration:none;
     color: inherit;
 }
-header .logo{
+header a.logo{
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -24,4 +24,18 @@ main{
     padding: 10px;
     max-width: 1260px;
     margin: 0 auto;
+}
+.pop-up-link{
+    margin-right: 15px;
+    text-decoration: none;
+
+}
+.cat-box{
+    background-color: #fdfbfb;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
 }
