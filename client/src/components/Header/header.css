@@ -8,10 +8,12 @@ header{
 header a{
     text-decoration:none;
     color: inherit;
+    font-family: 'Merriweather', serif;
 }
 header a.logo{
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
+
 }
 .logo:hover{
     color: inherit;

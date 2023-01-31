@@ -19,7 +19,7 @@ export default function Post({img}) {
                     <h2>Lorem ipsum dolor sit amet</h2>
                 </Link>
                 <p className="info">
-                    <a className="author">@author123</a>
+                    <Link to="/profile" className="author">@author123</Link>
                     <time>{formatISO9075(new Date(2022-12-12))}</time>
                 </p>
                 <div className="postCats">
