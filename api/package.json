@@ -1,16 +1,43 @@
 {
-  "name": "api",
-  "version": "0.0.0",
-  "private": true,
+  "name": "thegluck",
+  "version": "1.0.0",
+  "description": "Online culture magazine \"The Gluck\" for free publication to novice journalists. ",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "server": "nodemon app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMZolin/The-Gluck.git"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "node",
+    "express",
+    "journal",
+    "blog"
+  ],
+  "author": "Ivan Zolin <zolin5269@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IMZolin/The-Gluck/issues"
+  },
+  "homepage": "https://github.com/IMZolin/The-Gluck#readme",
   "dependencies": {
-    "bcrypt": "^5.1.0",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "mongoose": "^6.8.4",
-    "morgan": "~1.9.1"
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mogoose": "^0.0.1-security",
+    "mongoose": "^6.9.0",
+    "pg": "^8.9.0",
+    "postgres": "^3.3.3",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
   }
 }
