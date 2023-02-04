@@ -10,18 +10,31 @@
   - ExpressJS (Backend)
   - ReactJS (Frontend)
   - NodeJS (Server)
+- Docker 
+  - Dockerfile(for each part - api and client)
+  - docker compose
 
 ### The manual for deploying and configuring the application locally:
 1. Clone this repo by using
     ```
      git clone http://github.com/IMZolin/TheGluck.git
     ```
-2. Install node.js dependencies with:
+2. Install and launch express dependencies with:
     ```
+    cd client 
+   
     npm install
+   
+    npm start
+    
+    cd ..
     ```
 
-3. Compile and hot-reload for development
+3. Install and launch node.js dependencies with:
     ```
-    npm start
+    cd api 
+   
+    npm install
+   
+    npm run server
     ```

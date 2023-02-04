@@ -1,0 +1,74 @@
+version: '3.7'
+
+services:
+  server:
+    image: img-thegluck-api:v1
+    container_name: thegluck-api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+#    command: /usr/src/app/node_modules/.bin/nodemon app.js
+    volumes:
+      # Maps the server directory to
+      # the working directory in the container
+      - ./api/:/usr/src/app
+      # Maps the node_modules directory to
+      # the working directory in the container
+      # and also fixes bcrypt error
+      - /usr/src/app/node_modules
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./api/.env
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+#    depends_on:
+#      - db
+
+  client:
+    image: img-thegluck-client:v1
+    container_name: thegluck-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    env_file:
+      - ./client/.env
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+#    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+#  db:
+#    image: img-thegluck-postgres:v1
+#    environment:
+#      POSTGRES_USER: ${DB_USER:-pern_db}
+#      POSTGRES_PASSWORD: ${DB_PASSWORD:-root}
+#      PGDATA: /var/lib/postgresql/data
+#    volumes:
+#      - ./db/data:/var/lib/postgresql/data
+#      - ./db/docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+#    ports:
+#      - "5432:5432"
+#    networks:
+#      - db
+#    restart: unless-stopped
+networks:
+  app-network:
+  db:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local

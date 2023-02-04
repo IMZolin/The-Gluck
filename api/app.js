@@ -12,8 +12,6 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT|| 5000
 async function start(){
     try{
-        // await sequelize.authenticate()
-        // await sequelize.sync()
         app.listen(PORT, () =>  console.log(`App has been started on port ${PORT} ...`))
     }catch(e){
         console.log('Server Error', e.message)
